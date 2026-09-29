@@ -25,6 +25,10 @@ public class Television extends ProtoTV{
         return isOn;
     }
 
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
 
     // 볼륨을 설정하고 볼륨값을 읽는 메서드 생성
     // 볼륨 설정 범위는 0 ~ 100
