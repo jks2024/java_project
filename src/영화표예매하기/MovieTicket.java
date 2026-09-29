@@ -35,6 +35,7 @@ public class MovieTicket {
         }
         if (seat[seatNum - 1] == 0) {
             seat[seatNum - 1] = 1;
+            printSeat();
         } else {
             System.out.println("이미 예약된 좌석 입니다. 다른 좌석을 선택 하세요");
         }
@@ -49,11 +50,11 @@ public class MovieTicket {
 
         if (seat[seatNum - 1] == 1) {
             seat[seatNum - 1] = 0;
+            printSeat();
         } else {
             System.out.println("해당 좌석은 예약 되어 있지 않습니다.");
         }
     }
-
 
     // 총 판매 구입 반환 메서드 (int형으로 반환)
     public int getTotalPrice() {
