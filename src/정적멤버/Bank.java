@@ -4,7 +4,7 @@ public class Bank {
     private static int count = 0;  // 정적 멤버, 클래스 생성 시 단 한번 생성
     private final static String name = "KAKAO";  // 정거변수이면서 상수로 정의
     private int account;    // 게좌 잔액
-    private String owner;   // 예금주
+    private final String owner;   // 예금주
 
     // 생성자를 통해서 예금주와 잔액을 생성
     public Bank(String owner, int account) {
