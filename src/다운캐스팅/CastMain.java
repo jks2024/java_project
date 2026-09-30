@@ -13,15 +13,14 @@ public class CastMain {
     }
 
     public void addAnimal() {
-        animalList.add(new Animal());
         animalList.add(new Human());
         animalList.add(new Tiger());
         animalList.add(new Eagle());
 
         for (Animal animal : animalList) {
             animal.move();
+            animal.option();
         }
-
     }
 }
 
