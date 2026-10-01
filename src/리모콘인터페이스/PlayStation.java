@@ -10,7 +10,6 @@ public class PlayStation implements RemoteControl{
     @Override
     public void turnOFF() {
         System.out.println("PlayStation 전원을 끕니다.");
-
     }
 
     @Override
