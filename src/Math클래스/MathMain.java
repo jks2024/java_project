@@ -22,7 +22,6 @@ public class MathMain {
         }
         System.out.println(list);
 
-
         // 중복 되지 않는 로또 번호 생성기 만들기 (1 ~ 45 사이의 중복되지 않은 임의의 수 6개)
         List<Integer> lotto = new ArrayList<>();
         while (lotto.size() < 6) {
@@ -32,6 +31,28 @@ public class MathMain {
             }
         }
         System.out.println(lotto);
+
+        System.out.println(Math.abs(10));    // 10
+        System.out.println(Math.abs(-10));   // 10
+        System.out.println(Math.abs(-3.14)); // 3.14
+
+        // ceil() : 소수점이하가 있으면 무조건 올림
+        System.out.println(Math.ceil(10.0));
+        System.out.println(Math.ceil(10.1));
+        System.out.println(Math.ceil(10.00000001));
+        // floor() : 소수점 이하를 무조건 날림
+        System.out.println(Math.floor(10.0));
+        System.out.println(Math.floor(10.9));
+        System.out.println(Math.floor(10.00000001));
+        // round() : 반올림
+        System.out.println(Math.round(10.0));
+        System.out.println(Math.round(10.4999));
+        System.out.println(Math.round(10.5));
+        // max()와 min()
+        int x = 10;
+        int y = 20;
+        System.out.println(Math.max(x, y));
+        System.out.println(Math.min(x, y));
 
     }
 }
