@@ -8,7 +8,6 @@ public class Developer {
     private String addr;
 
     // 매개변수가 있는 생성자
-
     public Developer(String name, DevType devType, Career career, Gender gender, String addr) {
         this.name = name;
         this.devType = devType;
@@ -16,7 +15,6 @@ public class Developer {
         this.gender = gender;
         this.addr = addr;
     }
-
 
     // 정보 출력
     @Override
