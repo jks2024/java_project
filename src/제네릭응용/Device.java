@@ -1,11 +1,23 @@
 package 제네릭응용;
 
 public abstract class Device {
+    protected String name;  // protected 상속관계에서 접급 가능
     abstract void turnOn();
     abstract void turnOff();
+
+    Device(String name) {
+        this.name = name;
+    }
+    String getName() {
+        return name;
+    }
 }
 
 class Printer extends Device {
+    Printer(String name) {
+        super(name);
+    }
+
     @Override
     void turnOn() {
         System.out.println("프린터의 전원을 켭니다.");
@@ -18,6 +30,10 @@ class Printer extends Device {
 }
 
 class Monitor extends Device {
+    Monitor(String name) {
+        super(name);
+    }
+
     @Override
     void turnOn() {
         System.out.println("Monitor의 전원을 켭니다.");
@@ -30,6 +46,10 @@ class Monitor extends Device {
 }
 
 class KeyBoard extends Device {
+    KeyBoard(String name) {
+        super(name);
+    }
+
     @Override
     void turnOn() {
         System.out.println("KeyBoard의 전원을 켭니다.");
