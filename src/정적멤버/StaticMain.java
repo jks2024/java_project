@@ -13,7 +13,5 @@ public class StaticMain {
 
         System.out.println(Bank.getCount());  // 클래스싀 정적 메서드 호출
 
-
-
     }
 }
