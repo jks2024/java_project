@@ -14,16 +14,18 @@ public class GenericEx2 {
             int deviceNum = sc.nextInt();
 
             switch (deviceNum) {
-                case 1: controller.setDevice(new Printer()); break;
-                case 2: controller.setDevice(new Monitor()); break;
-                case 3: controller.setDevice(new KeyBoard()); break;
-                case 0: System.out.println("프로그램을 종료 합니다."); return;
+                case 1: controller.setDevice(new Printer("프린터")); break;
+                case 2: controller.setDevice(new Monitor("모니터")); break;
+                case 3: controller.setDevice(new KeyBoard("키보드")); break;
+                case 0:
+                    System.out.println("프로그램을 종료 합니다.");
+                    sc.close();
+                    return;
                 default: System.out.println("잘못된 입력 입니다.");
             }
 
-            System.out.println(controller.getDevice());
-
+            System.out.println(controller.getDevice().getName() + "전원을 겹니다.");
+            controller.powerOn();
         }
-
     }
 }
