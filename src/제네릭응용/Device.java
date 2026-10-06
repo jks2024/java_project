@@ -42,6 +42,30 @@ class KeyBoard extends Device {
 }
 
 class DeviceController <T extends Device> {
+    private T device;
 
+    public T getDevice() {
+        return device;
+    }
+
+    public void setDevice(T device) {
+        this.device = device;
+    }
+
+    public void powerOn() {
+        if (device == null) {
+            System.out.println("설정된 기기가 없습니다.");
+            return;
+        }
+        device.turnOn();
+    }
+
+    public void powerOff() {
+        if (device == null) {
+            System.out.println("설정된 기기가 없습니다.");
+            return;
+        }
+        device.turnOff();
+    }
 }
 
